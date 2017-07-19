@@ -8,7 +8,7 @@ A simple note taking app in "infinite" vertical scroll form
 ##  Preview
 ![alt text](src/images/scrollpad2.gif "Scroll Pad")
 
-##Features
+##  Features
 1. Search
 2. Sort by last change
 3. Add images
