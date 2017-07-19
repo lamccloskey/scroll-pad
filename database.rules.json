@@ -1,0 +1,26 @@
+{
+  "rules": {
+    "users": {
+      "$uid": {
+        ".read": "$uid === auth.uid",
+        ".write": "$uid === auth.uid",
+        "notes": {
+          "$note_id": {
+            "heading": {
+              ".validate": "newData.isString() && newData.val().length >= 0 && newData.val().length < 400"
+            },
+            "content": {
+              ".validate": "newData.isString() && newData.val().length >= 0 && newData.val().length < 50000"
+            },
+            "timestamp": {
+              ".validate": "newData.val() <= now"
+            },
+            "$other": {
+              ".validate": false
+            }
+          }
+        }
+      }
+    }
+  }
+}

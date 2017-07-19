@@ -1,0 +1,41 @@
+{
+  "database": {
+    "rules": "database.rules.json"
+  },
+  "hosting": {
+    "public": "dist",
+    "headers": [
+      {
+        "source": "**/*.@(eot|otf|ttf|ttc|woff)",
+        "headers": [
+          {
+            "key": "Access-Control-Allow-Origin",
+            "value": "*"
+          }
+        ]
+      },
+      {
+        "source": "**/*.@(jpg|jpeg|gif|png|js|css)",
+        "headers": [
+          {
+            "key": "Cache-Control",
+            "value": "max-age=604800"
+          }
+        ]
+      },
+      {
+        "source": "**/*.@(html)",
+        "headers": [
+          {
+            "key": "X-UA-Compatible",
+            "value": "IE=Edge"
+          },
+          {
+            "key": "X-Frame-Options",
+            "value": "deny"
+          }
+        ]
+      }
+    ]
+  }
+}

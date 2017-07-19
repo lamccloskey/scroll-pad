@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Scroll Pad</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+
+<body style="display: none">
+    <div class="wrapper">
+        <div id="card-top" class="card">
+            <div class="container">
+                <div class="row">
+                    <div class="col-2">
+                        <button id="new" class="button">
+                            <span class="fa fa-plus" aria-hidden="true"></span>
+                        </button>
+                        <button id="search" class="button">
+                            <span class="fa fa-search" aria-hidden="true"></span>
+                        </button>
+                    </div>
+                    <div class="col-5">
+                        <h1 id="title-top">Scroll Pad</h1>
+                    </div>
+                    <div class="col-2">
+                        <img id="user-photo-top">
+                    </div>
+
+                </div>
+                <div id="search-bar" class="row hidden">
+                    <div class="col-9">
+                        <input id="search-input" type="text">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="wrapper">
+        <div id="card-container-main"></div>
+    </div>
+
+    <div id="empty-container-main" class="wrapper">
+        <div class="row">
+            <div class="col-9">
+                <h2>Welcome to Scroll Pad</h2>
+                <p>
+                    <span>The most popular notes stay at the top</span>
+                    <br>
+                    <span>Searching is easy, click the icon and start typing</span>
+                </p>
+                <hr>
+                <p>Click the plus button to add a note</p>
+                <button id="first-new" class="button">
+                    <span class="fa fa-plus fa-3x" aria-hidden="true"></span>
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <div id="loading-icon" class="wrapper">
+        <div class="row">
+            <div class="col-9">
+                <div>
+                    <i class="fa fa-spinner fa-spin fa-3x fa-fw"></i>
+                    <span class="sr-only">Loading...</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="splash-container" class="wrapper">
+        <div class="row">
+            <div class="col-9">
+                <h1 id="title-splash">Scroll Pad</h1>
+            </div>
+        </div>
+
+        <div id="card-container-auth" class="center">
+            <div id="card-auth" class="card">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-9">
+                            <img id="splash-img" class="center-block">
+                            <h1>What will you write?</h1>
+                            <p>keep your long list of notes right here
+                                <br>
+                            <em>prioritized, searchable</em></p>
+                            <div id="firebaseui-auth-container"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="user-modal" class="modal">
+        <div class="modal-content">
+            <div class="modal-top">
+                <span id="modal-acc-close" class="close fa fa-times" aria-hidden="true"></span>
+            </div>
+            <div class="container">
+                <div class="row">
+                    <div class="col-9">
+                        <div id="user-info">
+                            <img id="user-photo" class="center-block">
+                            <p>
+                                <span class="fa fa-facebook-official fa-2x" aria-hidden="true"></span>
+                                <br>
+                                <span id="user-name"></span>
+                                <br>
+                                <span id="user-email"></span>
+                                <br>
+                                <span id="delete-account">Delete Account</span>
+                                <button id="delete-acc-confirm" class="button" style="display: none">Confirm Delete</button>
+                            </p>
+                        </div>
+                        <div class="button-group">
+                            <button id="sign-out" class="button">Sign Out</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="delete-modal" class="modal">
+        <div class="modal-content">
+            <div class="modal-top">
+                <span id="modal-del-close" class="close fa fa-times" aria-hidden="true"></span>
+            </div>
+            <div class="container">
+                <div class="row">
+                    <div class="col-9">
+                        <p>Are you sure you want to delete this note?</p>
+                        <div class="button-group">
+                            <button id="delete-confirm" class="button">Confirm Delete</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</body>
+
+</html>
